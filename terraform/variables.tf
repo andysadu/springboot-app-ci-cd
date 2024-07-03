@@ -5,12 +5,12 @@ variable "region" {
 
 variable "vpc_id" {
   description = "The ID of the VPC where resources will be created"
-  default     = "vpc-08a20b564a94cad98"
+  default     = "vpc-04878474c10e75770"
 }
 
 variable "instance_ami" {
   description = "AMI ID for the instances"
-  default     = "ami-0195204d5dce06d99"
+  default     = "ami-06c68f701d8090592"
 }
 
 variable "instance_key_name" {
@@ -20,7 +20,7 @@ variable "instance_key_name" {
 
 variable "instance_subnet_id" {
   description = "Public Subnet ID for the instances"
-  default     = "subnet-04e7a2e028dcb65ea"
+  default     = "subnet-082410f2d544090ab"
 }
 
 variable "instance_type" {
@@ -30,10 +30,10 @@ variable "instance_type" {
 
 variable "s3_bucket_name" {
   description = "The name of the S3 bucket for Terraform state"
-  default     = "stunnerz-springboot-app-bucket"
+  default     = "springboot-app-s3-bucket"
 }
 
 variable "dynamodb_table_name" {
   description = "The name of the DynamoDB table for Terraform state locking"
-  default     = "stunnerz-springboot-app-DynamoDB"
+  default     = "springboot-app-dynamodb"
 }
