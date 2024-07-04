@@ -5,8 +5,8 @@ pipeline {
     }
 
     parameters {
-        string(name: 'GITHUB_CREDENTIAL', defaultValue: 'jenkins_github_creds', description: 'Github access credentials id')
-        string(name: 'GITHUB_REPO_URL', defaultValue: 'https://github.com/ityourway/springboot-app-ci-cd.git', description: 'Github repository url')
+        string(name: 'GITHUB_CREDENTIAL', defaultValue: 'github-access-creds', description: 'Github access credentials id')
+        string(name: 'GITHUB_REPO_URL', defaultValue: 'https://github.com/QuophySark/springboot-app-ci-cd.git', description: 'Github repository url')
         string(name: 'GITHUB_BRANCH', defaultValue: 'main', description: 'Github branch for your build')
         string(name: 'SONARQUBE_SERVER_NAME', defaultValue: 'sonarqube_server', description: 'Name for your sonarqube server')
     }
@@ -68,13 +68,13 @@ pipeline {
         success {
             emailext body: "Build ${currentBuild.fullDisplayName} succeeded",
                      subject: "${env.JOB_NAME} - Build #${env.BUILD_NUMBER} - Successful",
-                     to: 'stunnerzroby@gmail.com',
+                     to: 'kofisark25@gmail.com',
                      attachLog: true
         }
         failure {
             emailext body: "Build ${currentBuild.fullDisplayName} failed",
                      subject: "${env.JOB_NAME} - Build #${env.BUILD_NUMBER} - Failed",
-                     to: 'stunnerzroby@gmail.com',
+                     to: 'kofisark25@gmail.com',
                      attachLog: true
         }
         
